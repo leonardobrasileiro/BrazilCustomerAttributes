@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <tab id="systemcode" translate="label" sortOrder="101">
-            <label>System Code</label>
+        <tab id="leonardobrasileiro" translate="label" sortOrder="101">
+            <label>Leonardo Brasileiro</label>
         </tab>
         <section id="brazilcustomerattributes" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
             <label>Brazil Customer Attributes</label>
-            <tab>systemcode</tab>
+            <tab>leonardobrasileiro</tab>
             <resource>Magento_Config::config_general</resource>
             <group id="general" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Configuration</label>
