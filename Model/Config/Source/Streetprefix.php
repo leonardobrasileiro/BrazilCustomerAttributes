@@ -15,7 +15,7 @@ use LeonardoBrasileiro\BrazilCustomerAttributes\Helper\Data as Helper;
  * NOTICE OF LICENSE
  *
  * @category   LeonardoBrasileiro
- * @package    Systemcode_BrazilCustomerAttributes
+ * @package    LeonardoBrasileiro_BrazilCustomerAttributes
  * @author     Eduardo Diogo Dias <contato@systemcode.com.br>
  * @copyright  System Code LTDA-ME
  * @license    http://opensource.org/licenses/osl-3.0.php
