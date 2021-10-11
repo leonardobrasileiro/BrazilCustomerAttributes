@@ -40,7 +40,7 @@
             "registration.php"
         ],
         "psr-4": {
-            "Leonardobrasileiro\\BrazilCustomerAttributes\\": ""
+            "LeonardoBrasileiro\\BrazilCustomerAttributes\\": ""
         }
     }
 }
