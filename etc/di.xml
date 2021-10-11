@@ -12,5 +12,8 @@
     <type name="Magento\Checkout\Model\PaymentInformationManagement">
         <plugin disabled="false" name="assign-billing" sortOrder="10" type="LeonardoBrasileiro\BrazilCustomerAttributes\Plugin\Checkout\PaymentInformationManagement"/>
     </type>
+    <type name="Magento\Checkout\Model\Session">
+        <plugin name="set_redirection_url_if_have_quote" type="LeonardoBrasileiro\BrazilCustomerAttributes\Plugin\Checkout\LoginRedirection" />
+    </type>
     <preference for="Magento\Customer\Model\ResourceModel\AddressRepository" type="LeonardoBrasileiro\BrazilCustomerAttributes\Model\Magento\Customer\ResourceModel\AddressRepository" />
 </config>
