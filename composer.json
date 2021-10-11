@@ -1,5 +1,5 @@
 {
-    "name": "systemcode/brazilcustomerattributes",
+    "name": "leonardobrasileiro/brazilcustomerattributes",
     "description":"Magento 2 module to adapt customer and address fields to brazil.",
     "keywords": [
         "magento 2",
@@ -22,10 +22,10 @@
     "license": [
         "proprietary"
     ],
-    "homepage": "https://www.systemcode.com.br/",
+    "homepage": "https://www.lesteti.com.br/",
     "support": {
-        "email": "contato@systemcode.com.br",
-        "issues": "https://github.com/eduardoddias/Magento-SystemCode_BrazilCustomerAttributes/issues/"
+        "email": "leo@lesteti.com.br",
+        "issues": "https://github.com/leonardobrasileiro/BrazilCustomerAttributes/issues/"
     },
     "authors": [
         {
@@ -40,7 +40,7 @@
             "registration.php"
         ],
         "psr-4": {
-            "SystemCode\\BrazilCustomerAttributes\\": ""
+            "Leonardobrasileiro\\BrazilCustomerAttributes\\": ""
         }
     }
 }
