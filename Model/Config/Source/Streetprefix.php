@@ -1,11 +1,11 @@
 <?php
 
-namespace SystemCode\BrazilCustomerAttributes\Model\Config\Source;
+namespace LeonardoBrasileiro\BrazilCustomerAttributes\Model\Config\Source;
 
 use Magento\Eav\Model\ResourceModel\Entity\Attribute\OptionFactory;
 
 use Magento\Framework\Serialize\SerializerInterface;
-use SystemCode\BrazilCustomerAttributes\Helper\Data as Helper;
+use LeonardoBrasileiro\BrazilCustomerAttributes\Helper\Data as Helper;
 
 /**
  *
@@ -14,7 +14,7 @@ use SystemCode\BrazilCustomerAttributes\Helper\Data as Helper;
  *
  * NOTICE OF LICENSE
  *
- * @category   SystemCode
+ * @category   LeonardoBrasileiro
  * @package    Systemcode_BrazilCustomerAttributes
  * @author     Eduardo Diogo Dias <contato@systemcode.com.br>
  * @copyright  System Code LTDA-ME

@@ -1,8 +1,8 @@
 <?php
 
-namespace SystemCode\BrazilCustomerAttributes\Block\Magento\Customer\Widget;
+namespace LeonardoBrasileiro\BrazilCustomerAttributes\Block\Magento\Customer\Widget;
 
-use SystemCode\BrazilCustomerAttributes\Helper\Data as Helper;
+use LeonardoBrasileiro\BrazilCustomerAttributes\Helper\Data as Helper;
 
 /**
  *
@@ -11,7 +11,7 @@ use SystemCode\BrazilCustomerAttributes\Helper\Data as Helper;
  *
  * NOTICE OF LICENSE
  *
- * @category   SystemCode
+ * @category   LeonardoBrasileiro
  * @package    Systemcode_BrazilCustomerAttributes
  * @author     Eduardo Diogo Dias <contato@systemcode.com.br>
  * @copyright  System Code LTDA-ME
@@ -53,7 +53,7 @@ class StreetprefixEdit extends \Magento\Customer\Block\Address\Edit
         \Magento\Customer\Helper\Session\CurrentCustomer $currentCustomer,
         \Magento\Framework\Api\DataObjectHelper $dataObjectHelper,
         Helper $helper,
-        \SystemCode\BrazilCustomerAttributes\Model\Config\Source\Streetprefix $streetprefix,
+        \LeonardoBrasileiro\BrazilCustomerAttributes\Model\Config\Source\Streetprefix $streetprefix,
         array $data = []
     ) {
         $this->helper = $helper;
@@ -83,7 +83,7 @@ class StreetprefixEdit extends \Magento\Customer\Block\Address\Edit
     public function _construct()
     {
         parent::_construct();
-        $this->setTemplate('SystemCode_BrazilCustomerAttributes::widget/streetprefix.phtml');
+        $this->setTemplate('LeonardoBrasileiro_BrazilCustomerAttributes::widget/streetprefix.phtml');
     }
 
     /**

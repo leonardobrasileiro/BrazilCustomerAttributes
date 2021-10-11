@@ -1,6 +1,6 @@
 <?php
 
-namespace SystemCode\BrazilCustomerAttributes\Block\Magento\Customer\Widget;
+namespace LeonardoBrasileiro\BrazilCustomerAttributes\Block\Magento\Customer\Widget;
 
 use Magento\Customer\Api\CustomerMetadataInterface;
 use Magento\Customer\Api\CustomerRepositoryInterface;
@@ -9,7 +9,7 @@ use Magento\Customer\Api\Data\OptionInterface;
 use Magento\Customer\Helper\Address;
 use Magento\Customer\Model\Session;
 use Magento\Framework\View\Element\Template\Context;
-use SystemCode\BrazilCustomerAttributes\Helper\Data as Helper;
+use LeonardoBrasileiro\BrazilCustomerAttributes\Helper\Data as Helper;
 
 /**
  *
@@ -18,7 +18,7 @@ use SystemCode\BrazilCustomerAttributes\Helper\Data as Helper;
  *
  * NOTICE OF LICENSE
  *
- * @category   SystemCode
+ * @category   LeonardoBrasileiro
  * @package    Systemcode_BrazilCustomerAttributes
  * @author     Eduardo Diogo Dias <contato@systemcode.com.br>
  * @copyright  System Code LTDA-ME
@@ -47,7 +47,7 @@ class Persontype extends \Magento\Customer\Block\Widget\AbstractWidget
     /**
      * Create an instance of the Gender widget
      *
-     * @param SystemCode\BrazilCustomerAttributes\Helper\Data $helper
+     * @param LeonardoBrasileiro\BrazilCustomerAttributes\Helper\Data $helper
      * @param \Magento\Framework\View\Element\Template\Context $context
      * @param \Magento\Customer\Helper\Address $addressHelper
      * @param CustomerMetadataInterface $customerMetadata
@@ -96,7 +96,7 @@ class Persontype extends \Magento\Customer\Block\Widget\AbstractWidget
     public function _construct()
     {
         parent::_construct();
-        //$this->setTemplate('SystemCode_BrazilCustomerAttributes::widget/persontype.phtml');
+        //$this->setTemplate('LeonardoBrasileiro_BrazilCustomerAttributes::widget/persontype.phtml');
     }
 
     /**

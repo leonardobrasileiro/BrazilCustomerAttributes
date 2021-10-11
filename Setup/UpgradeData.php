@@ -1,6 +1,6 @@
 <?php
 
-namespace SystemCode\BrazilCustomerAttributes\Setup;
+namespace LeonardoBrasileiro\BrazilCustomerAttributes\Setup;
 
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
@@ -15,7 +15,7 @@ use Magento\Eav\Api\AttributeRepositoryInterface;
  *
  * NOTICE OF LICENSE
  *
- * @category   SystemCode
+ * @category   LeonardoBrasileiro
  * @package    Systemcode_BrazilCustomerAttributes
  * @author     Eduardo Diogo Dias <contato@systemcode.com.br>
  * @copyright  System Code LTDA-ME
@@ -69,7 +69,7 @@ class UpgradeData implements UpgradeDataInterface {
             'type' => 'varchar',
             'input' => 'select',
             'label' => 'Street Prefix',
-            'source' => 'SystemCode\BrazilCustomerAttributes\Model\Config\Source\Streetprefix',
+            'source' => 'LeonardoBrasileiro\BrazilCustomerAttributes\Model\Config\Source\Streetprefix',
             'global' => 1,
             'visible' => 1,
             'required' => false,

@@ -1,6 +1,6 @@
 <?php
 
-namespace SystemCode\BrazilCustomerAttributes\Helper;
+namespace LeonardoBrasileiro\BrazilCustomerAttributes\Helper;
 
 /**
  *
@@ -9,7 +9,7 @@ namespace SystemCode\BrazilCustomerAttributes\Helper;
  *
  * NOTICE OF LICENSE
  *
- * @category   SystemCode
+ * @category   LeonardoBrasileiro
  * @package    Systemcode_BrazilCustomerAttributes
  * @author     Eduardo Diogo Dias <contato@systemcode.com.br>
  * @copyright  System Code LTDA-ME

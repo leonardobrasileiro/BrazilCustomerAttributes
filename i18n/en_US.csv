@@ -77,7 +77,7 @@ Enabled,Enabled
 "Show Social Name","Show Social Name"
 "Show Trade Name","Show Trade Name"
 Loading,Loading
-"Choose witch fields can customer edit after account created.","Choose witch fields can customer edit after account created."
+"Choose which fields can customer edit after account created.","Choose which fields can customer edit after account created."
 "Assign individual person to a group.","Assign individual person to a group."
 "Assign corporation person to a group.","Assign corporation person to a group."
 "Go to 'Stores > Configuration > Customers > Customer Configuration > Name and Address Options' and set 'Number of Lines in a Street Address' to '2'.","Go to 'Stores > Configuration > Customers > Customer Configuration > Name and Address Options' and set 'Number of Lines in a Street Address' to '2'."

@@ -6,7 +6,7 @@
  *
  * NOTICE OF LICENSE
  *
- * @category   SystemCode
+ * @category   LeonardoBrasileiro
  * @package    Systemcode_BrazilCustomerAttributes
  * @author     Eduardo Diogo Dias <contato@systemcode.com.br>
  * @copyright  System Code LTDA-ME
@@ -21,7 +21,7 @@
         <?php echo $block->getBlockHtml('formkey')?>
         <legend class="legend"><span><?php /* @escapeNotVerified */ echo __('Account Information') ?></span></legend><br>
 
-        <?php $_persontype = $block->getLayout()->createBlock('SystemCode\BrazilCustomerAttributes\Block\Magento\Customer\Widget\Persontype')->setTemplate('SystemCode_BrazilCustomerAttributes::widget/persontypetoggle.phtml') ?>
+        <?php $_persontype = $block->getLayout()->createBlock('LeonardoBrasileiro\BrazilCustomerAttributes\Block\Magento\Customer\Widget\Persontype')->setTemplate('LeonardoBrasileiro_BrazilCustomerAttributes::widget/persontypetoggle.phtml') ?>
         <?php if ($_persontype->getConfigAdmin  ("general", "enabled") &&
             $_persontype->getConfigAdmin("general", "customer_edit")!=""): ?>
             <?php echo $_persontype->setCustomerId($block->getCustomer()->getId())->toHtml() ?>
@@ -29,7 +29,7 @@
 
         <?php echo $block->getLayout()->createBlock('Magento\Customer\Block\Widget\Name')->setObject($block->getCustomer())->toHtml() ?>
 
-        <?php $_persontype = $block->getLayout()->createBlock('SystemCode\BrazilCustomerAttributes\Block\Magento\Customer\Widget\Persontype')->setTemplate('SystemCode_BrazilCustomerAttributes::widget/persontypefields.phtml') ?>
+        <?php $_persontype = $block->getLayout()->createBlock('LeonardoBrasileiro\BrazilCustomerAttributes\Block\Magento\Customer\Widget\Persontype')->setTemplate('LeonardoBrasileiro_BrazilCustomerAttributes::widget/persontypefields.phtml') ?>
         <?php if ($_persontype->getConfigAdmin  ("general", "enabled") &&
             $_persontype->getConfigAdmin("general", "customer_edit")!=""): ?>
             <?php echo $_persontype->setCustomerId($block->getCustomer()->getId())->toHtml() ?>
@@ -117,7 +117,7 @@
     ], function($){
         var dataForm = $('#form-validate');
         var ignore = <?php /* @escapeNotVerified */ echo $_dob->isEnabled() ? '\'input[id$="full"]\'' : 'null'; ?>;
-        
+
         dataForm.mage('validation', {
         <?php if ($_dob->isEnabled()): ?>
             errorPlacement: function(error, element) {

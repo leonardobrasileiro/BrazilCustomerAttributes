@@ -1,5 +1,5 @@
 <?php
-namespace SystemCode\BrazilCustomerAttributes\Model\Config\Backend\Show;
+namespace LeonardoBrasileiro\BrazilCustomerAttributes\Model\Config\Backend\Show;
 
 /**
  *
@@ -8,7 +8,7 @@ namespace SystemCode\BrazilCustomerAttributes\Model\Config\Backend\Show;
  *
  * NOTICE OF LICENSE
  *
- * @category   SystemCode
+ * @category   LeonardoBrasileiro
  * @package    Systemcode_BrazilCustomerAttributes
  * @author     Eduardo Diogo Dias <contato@systemcode.com.br>
  * @copyright  System Code LTDA-ME

@@ -6,23 +6,23 @@
 var config = {
     map: {
         '*': {
-            changePersonType: 'SystemCode_BrazilCustomerAttributes/change-person-type',
-            inputMask: 'SystemCode_BrazilCustomerAttributes/jquery.mask'
+            changePersonType: 'LeonardoBrasileiro_BrazilCustomerAttributes/change-person-type',
+            inputMask: 'LeonardoBrasileiro_BrazilCustomerAttributes/jquery.mask'
         },
     },
     config: {
         mixins: {
             'Magento_Checkout/js/action/set-shipping-information': {
-                'SystemCode_BrazilCustomerAttributes/js/action/set-shipping-information-mixin': true
+                'LeonardoBrasileiro_BrazilCustomerAttributes/js/action/set-shipping-information-mixin': true
             },
             'Magento_Checkout/js/action/create-shipping-address': {
-                'SystemCode_BrazilCustomerAttributes/js/action/create-shipping-address-mixin': true
+                'LeonardoBrasileiro_BrazilCustomerAttributes/js/action/create-shipping-address-mixin': true
             },
             'Magento_Checkout/js/action/create-billing-address': {
-                'SystemCode_BrazilCustomerAttributes/js/action/create-billing-address-mixin': true
+                'LeonardoBrasileiro_BrazilCustomerAttributes/js/action/create-billing-address-mixin': true
             },
             'Magento_Checkout/js/action/place-order': {
-                'SystemCode_BrazilCustomerAttributes/js/action/place-order-mixin': true
+                'LeonardoBrasileiro_BrazilCustomerAttributes/js/action/place-order-mixin': true
             }
         }
     }

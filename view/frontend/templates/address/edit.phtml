@@ -6,7 +6,7 @@
  *
  * NOTICE OF LICENSE
  *
- * @category   SystemCode
+ * @category   LeonardoBrasileiro
  * @package    Systemcode_BrazilCustomerAttributes
  * @author     Eduardo Diogo Dias <contato@systemcode.com.br>
  * @copyright  System Code LTDA-ME
@@ -54,9 +54,9 @@
             </div>
         </div>
 
-        <?php echo $block->getLayout()->createBlock('SystemCode\BrazilCustomerAttributes\Block\Magento\Customer\Widget\StreetprefixEdit')->toHtml() ?>
+        <?php echo $block->getLayout()->createBlock('LeonardoBrasileiro\BrazilCustomerAttributes\Block\Magento\Customer\Widget\StreetprefixEdit')->toHtml() ?>
 
-        <?php echo $block->getLayout()->createBlock('SystemCode\BrazilCustomerAttributes\Block\Magento\Customer\Widget\Streetedit')->toHtml() ?>
+        <?php echo $block->getLayout()->createBlock('LeonardoBrasileiro\BrazilCustomerAttributes\Block\Magento\Customer\Widget\Streetedit')->toHtml() ?>
 
         <?php if ($this->helper('Magento\Customer\Helper\Address')->isVatAttributeVisible()) : ?>
             <div class="field taxvat">

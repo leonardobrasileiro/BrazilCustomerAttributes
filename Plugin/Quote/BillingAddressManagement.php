@@ -1,5 +1,5 @@
 <?php
-namespace SystemCode\BrazilCustomerAttributes\Plugin\Quote;
+namespace LeonardoBrasileiro\BrazilCustomerAttributes\Plugin\Quote;
 
 use Psr\Log\LoggerInterface;
 use Magento\Quote\Model\BillingAddressManagement as CoreBillingAddressManagement;
@@ -10,7 +10,7 @@ use Magento\Quote\Api\Data\AddressInterface;
  *
  * NOTICE OF LICENSE
  *
- * @category  SystemCode
+ * @category  LeonardoBrasileiro
  * @package   Systemcode_BrazilCustomerAttributes
  * @author    Eduardo Diogo Dias <contato@systemcode.com.br>
  * @copyright System Code LTDA-ME

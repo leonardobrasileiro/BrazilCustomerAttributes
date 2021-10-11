@@ -1,6 +1,6 @@
 <?php
 
-namespace SystemCode\BrazilCustomerAttributes\Config\Backend;
+namespace LeonardoBrasileiro\BrazilCustomerAttributes\Config\Backend;
 
 use Magento\Framework\App\Cache\TypeListInterface;
 use Magento\Framework\App\Config\ScopeConfigInterface;
@@ -18,7 +18,7 @@ use Magento\Framework\Serialize\SerializerInterface;
  *
  * NOTICE OF LICENSE
  *
- * @category   SystemCode
+ * @category   LeonardoBrasileiro
  * @package    Systemcode_BrazilCustomerAttributes
  * @author     Eduardo Diogo Dias <contato@systemcode.com.br>
  * @copyright  System Code LTDA-ME

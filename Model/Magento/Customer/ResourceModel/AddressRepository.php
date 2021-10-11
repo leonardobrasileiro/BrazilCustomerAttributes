@@ -1,6 +1,6 @@
 <?php
-namespace SystemCode\BrazilCustomerAttributes\Model\Magento\Customer\ResourceModel;
-use SystemCode\BrazilCustomerAttributes\Helper\Data as Helper;
+namespace LeonardoBrasileiro\BrazilCustomerAttributes\Model\Magento\Customer\ResourceModel;
+use LeonardoBrasileiro\BrazilCustomerAttributes\Helper\Data as Helper;
 
 /**
  *
@@ -9,7 +9,7 @@ use SystemCode\BrazilCustomerAttributes\Helper\Data as Helper;
  *
  * NOTICE OF LICENSE
  *
- * @category   SystemCode
+ * @category   LeonardoBrasileiro
  * @package    Systemcode_BrazilCustomerAttributes
  * @author     Eduardo Diogo Dias <contato@systemcode.com.br>
  * @copyright  System Code LTDA-ME

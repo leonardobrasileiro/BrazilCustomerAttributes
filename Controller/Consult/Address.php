@@ -1,10 +1,10 @@
 <?php
 
-namespace SystemCode\BrazilCustomerAttributes\Controller\Consult;
+namespace LeonardoBrasileiro\BrazilCustomerAttributes\Controller\Consult;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
-use SystemCode\BrazilCustomerAttributes\Helper\Data as Helper;
+use LeonardoBrasileiro\BrazilCustomerAttributes\Helper\Data as Helper;
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\Result\JsonFactory;
 
@@ -15,7 +15,7 @@ use Magento\Framework\Controller\Result\JsonFactory;
  *
  * NOTICE OF LICENSE
  *
- * @category   SystemCode
+ * @category   LeonardoBrasileiro
  * @package    Systemcode_BrazilCustomerAttributes
  * @author     Eduardo Diogo Dias <contato@systemcode.com.br>
  * @copyright  System Code LTDA-ME

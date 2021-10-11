@@ -1,6 +1,6 @@
 <?php
 
-namespace SystemCode\BrazilCustomerAttributes\Observer;
+namespace LeonardoBrasileiro\BrazilCustomerAttributes\Observer;
 
 use \Magento\Customer\Api\AddressRepositoryInterface;
 
@@ -11,7 +11,7 @@ use \Magento\Customer\Api\AddressRepositoryInterface;
  *
  * NOTICE OF LICENSE
  *
- * @category   SystemCode
+ * @category   LeonardoBrasileiro
  * @package    Systemcode_BrazilCustomerAttributes
  * @author     Eduardo Diogo Dias <contato@systemcode.com.br>
  * @copyright  System Code LTDA-ME

@@ -1,6 +1,6 @@
 <?php
 
-namespace SystemCode\BrazilCustomerAttributes\Plugin\Checkout;
+namespace LeonardoBrasileiro\BrazilCustomerAttributes\Plugin\Checkout;
 
 use Magento\Quote\Api\BillingAddressManagementInterface;
 use Magento\Quote\Api\Data\PaymentInterface;
@@ -13,7 +13,7 @@ use Magento\Checkout\Model\PaymentInformationManagement as CorePaymentInformatio
  *
  * NOTICE OF LICENSE
  *
- * @category   SystemCode
+ * @category   LeonardoBrasileiro
  * @package    Systemcode_BrazilCustomerAttributes
  * @author     Eduardo Diogo Dias <contato@systemcode.com.br>
  * @copyright  System Code LTDA-ME

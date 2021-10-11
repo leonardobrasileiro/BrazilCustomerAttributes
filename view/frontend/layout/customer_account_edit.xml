@@ -3,7 +3,7 @@
     <body>
         <referenceBlock name="customer_edit">
             <action method="setTemplate">
-                <argument name="template" xsi:type="string">SystemCode_BrazilCustomerAttributes::form/edit.phtml</argument>
+                <argument name="template" xsi:type="string">LeonardoBrasileiro_BrazilCustomerAttributes::form/edit.phtml</argument>
             </action>
         </referenceBlock>
     </body>

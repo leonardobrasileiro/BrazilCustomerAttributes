@@ -1,9 +1,9 @@
 <?php
 
-namespace SystemCode\BrazilCustomerAttributes\Block\Magento\Customer\Widget;
+namespace LeonardoBrasileiro\BrazilCustomerAttributes\Block\Magento\Customer\Widget;
 
 use PHPUnit\Runner\Exception;
-use SystemCode\BrazilCustomerAttributes\Helper\Data as Helper;
+use LeonardoBrasileiro\BrazilCustomerAttributes\Helper\Data as Helper;
 use Magento\Customer\Api\CustomerMetadataInterface;
 
 /**
@@ -13,7 +13,7 @@ use Magento\Customer\Api\CustomerMetadataInterface;
  *
  * NOTICE OF LICENSE
  *
- * @category   SystemCode
+ * @category   LeonardoBrasileiro
  * @package    Systemcode_BrazilCustomerAttributes
  * @author     Eduardo Diogo Dias <contato@systemcode.com.br>
  * @copyright  System Code LTDA-ME
@@ -35,7 +35,7 @@ class StreetprefixRegister extends \Magento\Directory\Block\Data
      * @param \Magento\Directory\Model\ResourceModel\Region\CollectionFactory $regionCollectionFactory
      * @param \Magento\Directory\Model\ResourceModel\Country\CollectionFactory $countryCollectionFactory
      * @param Helper $helper
-     * @param \SystemCode\BrazilCustomerAttributes\Model\Config\Source\Streetprefix $streetprefix
+     * @param \LeonardoBrasileiro\BrazilCustomerAttributes\Model\Config\Source\Streetprefix $streetprefix
      * @param array $data
      */
     public function __construct(
@@ -46,7 +46,7 @@ class StreetprefixRegister extends \Magento\Directory\Block\Data
         \Magento\Directory\Model\ResourceModel\Region\CollectionFactory $regionCollectionFactory,
         \Magento\Directory\Model\ResourceModel\Country\CollectionFactory $countryCollectionFactory,
         Helper $helper,
-        \SystemCode\BrazilCustomerAttributes\Model\Config\Source\Streetprefix $streetprefix,
+        \LeonardoBrasileiro\BrazilCustomerAttributes\Model\Config\Source\Streetprefix $streetprefix,
         array $data = [])
     {
         $this->helper = $helper;
@@ -63,7 +63,7 @@ class StreetprefixRegister extends \Magento\Directory\Block\Data
     public function _construct()
     {
         parent::_construct();
-        $this->setTemplate('SystemCode_BrazilCustomerAttributes::widget/streetprefix.phtml');
+        $this->setTemplate('LeonardoBrasileiro_BrazilCustomerAttributes::widget/streetprefix.phtml');
     }
 
     /**

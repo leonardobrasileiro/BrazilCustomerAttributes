@@ -1,6 +1,6 @@
 <?php
 
-namespace SystemCode\BrazilCustomerAttributes\Setup;
+namespace LeonardoBrasileiro\BrazilCustomerAttributes\Setup;
 use Magento\Customer\Setup\CustomerSetupFactory;
 use Magento\Customer\Model\Customer;
 use Magento\Framework\Setup\InstallDataInterface;
@@ -15,7 +15,7 @@ use Magento\Eav\Model\Entity\Attribute\SetFactory as AttributeSetFactory;
  *
  * NOTICE OF LICENSE
  *
- * @category   SystemCode
+ * @category   LeonardoBrasileiro
  * @package    Systemcode_BrazilCustomerAttributes
  * @author     Eduardo Diogo Dias <contato@systemcode.com.br>
  * @copyright  System Code LTDA-ME
@@ -126,7 +126,7 @@ class InstallData implements InstallDataInterface
             $customerSetup->addAttribute(Customer::ENTITY, $attributeCode, $attributeParams);
         }
 
-        
+
         // REGISTER THE FIELD CPF
         $customerCpfAttribute = $customerSetup->getEavConfig()->getAttribute(Customer::ENTITY, 'cpf');
         $customerCpfAttribute->addData([
@@ -136,7 +136,7 @@ class InstallData implements InstallDataInterface
         ]);
         $customerCpfAttribute->save();
 
-        
+
         // REGISTER THE FIELD CNPJ
         $customerCnpjAttribute = $customerSetup->getEavConfig()->getAttribute(Customer::ENTITY, 'cnpj');
         $customerCnpjAttribute->addData([
@@ -146,7 +146,7 @@ class InstallData implements InstallDataInterface
         ]);
         $customerCnpjAttribute->save();
 
-        
+
         // REGISTER THE FIELD RG
         $customerRgAttribute = $customerSetup->getEavConfig()->getAttribute(Customer::ENTITY, 'rg');
         $customerRgAttribute->addData([
@@ -165,7 +165,7 @@ class InstallData implements InstallDataInterface
         ]);
         $customerSocialNameAttribute->save();
 
-        
+
         // REGISTER THE FIELD TRADE NAME
         $customerTradeNameAttribute = $customerSetup->getEavConfig()->getAttribute(Customer::ENTITY, 'tradename');
         $customerTradeNameAttribute->addData([

@@ -4,10 +4,8 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
-                <resource id="SystemCode_Base::systemcode">
-                    <resource id="SystemCode_BrazilCustomerAttributes::brazilcustomerattributes" title="Brazil Customer Attributes" sortOrder="12">
-                        <resource id="SystemCode_BrazilCustomerAttributes::configuration" title="Configuration" sortOrder="100"/>
-                    </resource>
+                <resource id="LeonardoBrasileiro_BrazilCustomerAttributes::brazilcustomerattributes" title="Brazil Customer Attributes" sortOrder="12">
+                    <resource id="LeonardoBrasileiro_BrazilCustomerAttributes::configuration" title="Configuration" sortOrder="100"/>
                 </resource>
             </resource>
         </resources>

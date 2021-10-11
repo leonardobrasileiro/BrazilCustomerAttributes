@@ -21,13 +21,13 @@ PS: This module doesn't work with checkout as guest.
 #### ✓ Install by Composer (recommended)
 ```
 composer require systemcode/brazilcustomerattributes
-php bin/magento module:enable SystemCode_BrazilCustomerAttributes SystemCode_Base
+php bin/magento module:enable LeonardoBrasileiro_BrazilCustomerAttributes LeonardoBrasileiro_Base
 php bin/magento setup:upgrade
 ```
 
 #### ✓ Install Manually
-- Install [System Code Base](https://github.com/eduardoddias/Magento-SystemCode_Base) first 
-- After copy module to folder app/code/SystemCode/BrazilCustomerAttributes and run commands:
+- Install [System Code Base](https://github.com/eduardoddias/Magento-LeonardoBrasileiro_Base) first 
+- After copy module to folder app/code/LeonardoBrasileiro/BrazilCustomerAttributes and run commands:
 ```
 php bin/magento setup:di:compile
 php bin/magento setup:upgrade
@@ -35,7 +35,7 @@ php bin/magento setup:upgrade
 
 ### Configuration
 
-Configure module on SystemCode > Brazil Customer Attributes > Configuration
+Configure module on LeonardoBrasileiro > Brazil Customer Attributes > Configuration
 
 ### TODO
 * Refactor
@@ -75,13 +75,13 @@ OBS: O módulo não funciona com checkout como visitante.
 #### ✓ Instalação via Composer (recomendado)
 ```
 composer require systemcode/brazilcustomerattributes
-php bin/magento module:enable SystemCode_BrazilCustomerAttributes SystemCode_Base
+php bin/magento module:enable LeonardoBrasileiro_BrazilCustomerAttributes LeonardoBrasileiro_Base
 php bin/magento setup:upgrade
 ```
 
 #### ✓ Instalação Manual
-- Install [System Code Base](https://github.com/eduardoddias/Magento-SystemCode_Base) first 
-- After copy module to folder app/code/SystemCode/BrazilCustomerAttributes and run commands:
+- Install [System Code Base](https://github.com/eduardoddias/Magento-LeonardoBrasileiro_Base) first 
+- After copy module to folder app/code/LeonardoBrasileiro/BrazilCustomerAttributes and run commands:
 ```
 php bin/magento setup:di:compile
 php bin/magento setup:upgrade

@@ -14,7 +14,6 @@
         "magento2 tipo pessoa"
     ],
     "require": {
-        "systemcode/base": "*",
         "magedev/brazilzipcode": "*"
     },
     "type": "magento2-module",

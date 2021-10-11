@@ -6,7 +6,7 @@
  *
  * NOTICE OF LICENSE
  *
- * @category   SystemCode
+ * @category   LeonardoBrasileiro
  * @package    Systemcode_BrazilCustomerAttributes
  * @author     Eduardo Diogo Dias <contato@systemcode.com.br>
  * @copyright  System Code LTDA-ME
@@ -33,14 +33,14 @@
         <input type="hidden" name="success_url" value="<?php /* @escapeNotVerified */ echo $block->getSuccessUrl() ?>">
         <input type="hidden" name="error_url" value="<?php /* @escapeNotVerified */ echo $block->getErrorUrl() ?>">
 
-        <?php $_persontype = $block->getLayout()->createBlock('SystemCode\BrazilCustomerAttributes\Block\Magento\Customer\Widget\Persontype')->setTemplate('SystemCode_BrazilCustomerAttributes::widget/persontypetoggle.phtml') ?>
+        <?php $_persontype = $block->getLayout()->createBlock('LeonardoBrasileiro\BrazilCustomerAttributes\Block\Magento\Customer\Widget\Persontype')->setTemplate('LeonardoBrasileiro_BrazilCustomerAttributes::widget/persontypetoggle.phtml') ?>
         <?php if ($_persontype->getConfigAdmin  ("general", "enabled")): ?>
             <?php echo $_persontype->toHtml() ?>
         <?php endif ?>
 
         <?php echo $block->getLayout()->createBlock('Magento\Customer\Block\Widget\Name')->setObject($block->getFormData())->setForceUseCustomerAttributes(true)->toHtml() ?>
 
-        <?php $_persontype = $block->getLayout()->createBlock('SystemCode\BrazilCustomerAttributes\Block\Magento\Customer\Widget\Persontype')->setTemplate('SystemCode_BrazilCustomerAttributes::widget/persontypefields.phtml') ?>
+        <?php $_persontype = $block->getLayout()->createBlock('LeonardoBrasileiro\BrazilCustomerAttributes\Block\Magento\Customer\Widget\Persontype')->setTemplate('LeonardoBrasileiro_BrazilCustomerAttributes::widget/persontypefields.phtml') ?>
         <?php if ($_persontype->getConfigAdmin  ("general", "enabled")): ?>
             <?php echo $_persontype->toHtml() ?>
         <?php endif ?>
@@ -82,8 +82,8 @@
                 </div>
             </div>
 
-            <?php echo $block->getLayout()->createBlock('SystemCode\BrazilCustomerAttributes\Block\Magento\Customer\Widget\StreetprefixRegister')->toHtml() ?>
-            <?php echo $block->getLayout()->createBlock('SystemCode\BrazilCustomerAttributes\Block\Magento\Customer\Widget\Street')->toHtml() ?>
+            <?php echo $block->getLayout()->createBlock('LeonardoBrasileiro\BrazilCustomerAttributes\Block\Magento\Customer\Widget\StreetprefixRegister')->toHtml() ?>
+            <?php echo $block->getLayout()->createBlock('LeonardoBrasileiro\BrazilCustomerAttributes\Block\Magento\Customer\Widget\Street')->toHtml() ?>
 
             <div class="field required">
                 <label for="city" class="label"><span><?php /* @escapeNotVerified */ echo __('City') ?></span></label>

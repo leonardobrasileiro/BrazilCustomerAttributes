@@ -1,11 +1,11 @@
 <?php
 
-namespace SystemCode\BrazilCustomerAttributes\Observer;
+namespace LeonardoBrasileiro\BrazilCustomerAttributes\Observer;
 
 use \Magento\Framework\Message\ManagerInterface;
 use \Magento\Framework\App\RequestInterface;
 use \Magento\Framework\Exception\CouldNotSaveException;
-use SystemCode\BrazilCustomerAttributes\Helper\Data as Helper;
+use LeonardoBrasileiro\BrazilCustomerAttributes\Helper\Data as Helper;
 use \Magento\Customer\Model\Session;
 
 /**
@@ -15,7 +15,7 @@ use \Magento\Customer\Model\Session;
  *
  * NOTICE OF LICENSE
  *
- * @category   SystemCode
+ * @category   LeonardoBrasileiro
  * @package    Systemcode_BrazilCustomerAttributes
  * @author     Eduardo Diogo Dias <contato@systemcode.com.br>
  * @copyright  System Code LTDA-ME

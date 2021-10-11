@@ -1,8 +1,8 @@
 <?php
 
-namespace SystemCode\BrazilCustomerAttributes\Block\Magento\Customer\Widget;
+namespace LeonardoBrasileiro\BrazilCustomerAttributes\Block\Magento\Customer\Widget;
 
-use SystemCode\BrazilCustomerAttributes\Helper\Data as Helper;
+use LeonardoBrasileiro\BrazilCustomerAttributes\Helper\Data as Helper;
 use Magento\Customer\Api\CustomerMetadataInterface;
 
 /**
@@ -12,7 +12,7 @@ use Magento\Customer\Api\CustomerMetadataInterface;
  *
  * NOTICE OF LICENSE
  *
- * @category   SystemCode
+ * @category   LeonardoBrasileiro
  * @package    Systemcode_BrazilCustomerAttributes
  * @author     Eduardo Diogo Dias <contato@systemcode.com.br>
  * @copyright  System Code LTDA-ME
@@ -51,7 +51,7 @@ class Street extends \Magento\Customer\Block\Widget\AbstractWidget
     public function _construct()
     {
         parent::_construct();
-        $this->setTemplate('SystemCode_BrazilCustomerAttributes::widget/street.phtml');
+        $this->setTemplate('LeonardoBrasileiro_BrazilCustomerAttributes::widget/street.phtml');
     }
 
     /**

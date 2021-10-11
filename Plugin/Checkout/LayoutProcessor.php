@@ -1,15 +1,15 @@
 <?php
 
-namespace SystemCode\BrazilCustomerAttributes\Plugin\Checkout;
+namespace LeonardoBrasileiro\BrazilCustomerAttributes\Plugin\Checkout;
 
-use SystemCode\BrazilCustomerAttributes\Helper\Data as Helper;
+use LeonardoBrasileiro\BrazilCustomerAttributes\Helper\Data as Helper;
 
 /**
  * Model to add label each address line
  *
  * NOTICE OF LICENSE
  *
- * @category  SystemCode
+ * @category  LeonardoBrasileiro
  * @package   Systemcode_BrazilCustomerAttributes
  * @author    Eduardo Diogo Dias <contato@systemcode.com.br>
  * @copyright System Code LTDA-ME
@@ -24,7 +24,7 @@ class LayoutProcessor
     protected $helper;
 
     /**
-     * @var \SystemCode\BrazilCustomerAttributes\Model\Config\Source\Streetprefix
+     * @var \LeonardoBrasileiro\BrazilCustomerAttributes\Model\Config\Source\Streetprefix
      */
     protected $streetprefix;
 
@@ -37,11 +37,11 @@ class LayoutProcessor
      * LayoutProcessorPlugin constructor.
      *
      * @param Helper                                                                $helper
-     * @param \SystemCode\BrazilCustomerAttributes\Model\Config\Source\Streetprefix $streetprefix
+     * @param \LeonardoBrasileiro\BrazilCustomerAttributes\Model\Config\Source\Streetprefix $streetprefix
      */
     public function __construct(
         Helper $helper,
-        \SystemCode\BrazilCustomerAttributes\Model\Config\Source\Streetprefix $streetprefix
+        \LeonardoBrasileiro\BrazilCustomerAttributes\Model\Config\Source\Streetprefix $streetprefix
     ) {
         $this->helper = $helper;
         $this->streetprefix = $streetprefix;
@@ -153,17 +153,17 @@ class LayoutProcessor
         // Zipcode
         $shippingAddressFieldsetChild['postcode']['sortOrder'] = 40;
         $shippingAddressFieldsetChild['postcode']['component'] =
-            'SystemCode_BrazilCustomerAttributes/js/shipping-address/address-renderer/zip-code';
+            'LeonardoBrasileiro_BrazilCustomerAttributes/js/shipping-address/address-renderer/zip-code';
         $shippingAddressFieldsetChild['postcode']['config']['elementTmpl'] =
-            'SystemCode_BrazilCustomerAttributes/shipping-address/address-renderer/zip-code';
+            'LeonardoBrasileiro_BrazilCustomerAttributes/shipping-address/address-renderer/zip-code';
 
         // Telephone
         $shippingAddressFieldsetChild['telephone']['component'] =
-            'SystemCode_BrazilCustomerAttributes/js/shipping-address/address-renderer/telephone';
+            'LeonardoBrasileiro_BrazilCustomerAttributes/js/shipping-address/address-renderer/telephone';
 
         // Fax
         $shippingAddressFieldsetChild['fax']['component'] =
-            'SystemCode_BrazilCustomerAttributes/js/shipping-address/address-renderer/telephone';
+            'LeonardoBrasileiro_BrazilCustomerAttributes/js/shipping-address/address-renderer/telephone';
 
         $jsLayout['components']['checkout']['children']['steps']['children']
             ['shipping-step']['children']['shippingAddress']['children']
@@ -258,17 +258,17 @@ class LayoutProcessor
                 // Zipcode
                 $paymentFormChildren['postcode']['sortOrder'] = 40;
                 $paymentFormChildren['postcode']['component'] =
-                    'SystemCode_BrazilCustomerAttributes/js/shipping-address/address-renderer/zip-code';
+                    'LeonardoBrasileiro_BrazilCustomerAttributes/js/shipping-address/address-renderer/zip-code';
                 $paymentFormChildren['postcode']['config']['elementTmpl'] =
-                    'SystemCode_BrazilCustomerAttributes/shipping-address/address-renderer/zip-code';
+                    'LeonardoBrasileiro_BrazilCustomerAttributes/shipping-address/address-renderer/zip-code';
 
                 // Telephone
                 $paymentFormChildren['telephone']['component'] =
-                    'SystemCode_BrazilCustomerAttributes/js/shipping-address/address-renderer/telephone';
+                    'LeonardoBrasileiro_BrazilCustomerAttributes/js/shipping-address/address-renderer/telephone';
 
                 // Fax
                 $paymentFormChildren['fax']['component'] =
-                    'SystemCode_BrazilCustomerAttributes/js/shipping-address/address-renderer/telephone';
+                    'LeonardoBrasileiro_BrazilCustomerAttributes/js/shipping-address/address-renderer/telephone';
 
                 $jsLayout['components']['checkout']['children']['steps']['children']
                     ['billing-step']['children']['payment']['children']['payments-list']['children']
