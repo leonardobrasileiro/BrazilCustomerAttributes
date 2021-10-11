@@ -59,6 +59,8 @@ class UpgradeData implements UpgradeDataInterface {
             $this->addStreetPrefix($setup);
         }
 
+        $this->updateStreetPrefixModel($setup);
+
         $setup->endSetup();
     }
 
@@ -83,5 +85,14 @@ class UpgradeData implements UpgradeDataInterface {
         $eavSetup->getEavConfig()->getAttribute('customer_address','street_prefix')
             ->setUsedInForms(array('adminhtml_customer_address','customer_address_edit','customer_register_address'))
             ->save();
+    }
+
+    private function updateStreetPrefixModel(ModuleDataSetupInterface $setup)
+    {
+        $sql = "update eav_attribute ";
+        $sql .= "set source_model = replace(source_model,'SystemCode','LeonardoBrasileiro') ";
+        $sql .= "where source_model like 'SystemCode%' ";
+
+        $setup->getConnection()->query($sql);
     }
 }
