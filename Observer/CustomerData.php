@@ -42,31 +42,31 @@ class CustomerData implements \Magento\Framework\Event\ObserverInterface
         $params = $this->_request->getParams();
         $customer = $observer->getCustomer();
 
-        if($customer->getId()){
-            if(isset($params["person_type"]) && $params["person_type"]=="cpf"){
+        if ($customer->getId()) {
+            if (isset($params["person_type"]) && $params["person_type"]=="cpf") {
                 $groupId = $this->_helper->getConfig("brazilcustomerattributes/general/customer_group_cpf");
 
                 $customer->setCnpj();
                 $customer->setSocialname();
                 $customer->setIe();
-            }else if(isset($params["person_type"]) && $params["person_type"]=="cnpj"){
+            } else if(isset($params["person_type"]) && $params["person_type"]=="cnpj") {
                 $groupId = $this->_helper->getConfig("brazilcustomerattributes/general/customer_group_cnpj");
 
                 $customer->setCpf();
                 $customer->setRg();
             }
 
-            if(isset($params["cpf"]) && $params["cpf"]!=""){
+            if (isset($params["cpf"]) && $params["cpf"]!="") {
                 $document = $params["cpf"];
-            }else if(isset($params["cnpj"]) && $params["cnpj"]!=""){
+            } else if (isset($params["cnpj"]) && $params["cnpj"]!="") {
                 $document = $params["cnpj"];
             }
 
-            if(isset($groupId) && $groupId!=""){
+            if (isset($groupId) && $groupId!="") {
                 $customer->setGroupId($groupId);
             }
 
-            if(isset($document) && $this->_helper->getConfig("brazilcustomerattributes/general/copy_taxvat")){
+            if (isset($document) && $this->_helper->getConfig("brazilcustomerattributes/general/copy_taxvat")) {
                 $customer->setTaxvat($document);
             }
 

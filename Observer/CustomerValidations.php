@@ -2,6 +2,7 @@
 
 namespace LeonardoBrasileiro\BrazilCustomerAttributes\Observer;
 
+use Magento\Customer\Model\CustomerFactory;
 use \Magento\Framework\Message\ManagerInterface;
 use \Magento\Framework\App\RequestInterface;
 use \Magento\Framework\Exception\CouldNotSaveException;
@@ -42,7 +43,15 @@ class CustomerValidations implements \Magento\Framework\Event\ObserverInterface
     {
         $params = $this->_request->getParams();
 
-        if(isset($params["person_type"]) && $params["person_type"]=="cpf"){
+        if (!isset($params["person_type"]) && isset($params["cpf"])) {
+            $params["person_type"] = "cpf";
+        } else if (!isset($params["person_type"]) && isset($params["cnpj"])) {
+            $params["person_type"] = "cnpj";
+        }
+
+        $email = $params["email"];
+
+        if (isset($params["person_type"]) && $params["person_type"]=="cpf") {
             $cpf = (isset($params["cpf"])?$params["cpf"]:"");
             $rg = (isset($params["rg"])?$params["rg"]:"");
 
@@ -54,13 +63,13 @@ class CustomerValidations implements \Magento\Framework\Event\ObserverInterface
                 }
             }
 
-            if(!$this->_validateInput($cpf, "cpf", "cpf/cpf_show")){
+            if(!$this->_validateInput($cpf, "cpf", "cpf/cpf_show", $email)){
                 throw new CouldNotSaveException(
                     __("%1 already in use.", "CPF")
                 );
             }
 
-            if(!$this->_validateInput($rg, "rg", "cpf/rg_show")){
+            if(!$this->_validateInput($rg, "rg", "cpf/rg_show", $email)){
                 throw new CouldNotSaveException(
                     __("%1 already in use.", "RG")
                 );
@@ -80,25 +89,25 @@ class CustomerValidations implements \Magento\Framework\Event\ObserverInterface
                 }
             }
 
-            if(!$this->_validateInput($cnpj, "cnpj", "cnpj/cnpj_show")){
+            if(!$this->_validateInput($cnpj, "cnpj", "cnpj/cnpj_show", $email)){
                 throw new CouldNotSaveException(
                     __("%1 already in use.", "CNPJ")
                 );
             }
 
-            if(!$this->_validateInput($ie, "ie", "cnpj/ie_show")){
+            if(!$this->_validateInput($ie, "ie", "cnpj/ie_show", $email)){
                 throw new CouldNotSaveException(
                     __("%1 already in use.", "ie")
                 );
             }
 
-            if(!$this->_validateInput($socialName, "socialname", "cnpj/socialname_show")){
+            if(!$this->_validateInput($socialName, "socialname", "cnpj/socialname_show", $email)){
                 throw new CouldNotSaveException(
                     __("%1 already in use.", "Social Name")
                 );
             }
 
-            if(!$this->_validateInput($tradeName, "tradename", "cnpj/tradename_show")){
+            if(!$this->_validateInput($tradeName, "tradename", "cnpj/tradename_show", $email)){
                 throw new CouldNotSaveException(
                     __("%1 already in use.", "Trade Name")
                 );
@@ -106,7 +115,7 @@ class CustomerValidations implements \Magento\Framework\Event\ObserverInterface
         }
     }
 
-    protected function _validateInput($value, $fieldName, $path){
+    protected function _validateInput($value, $fieldName, $path, $email) {
         $show = $this->_helper->getConfig("brazilcustomerattributes/".$path);
         if($show == "req" || $show == "requni"){
             if($value == ""){
@@ -123,12 +132,9 @@ class CustomerValidations implements \Magento\Framework\Event\ObserverInterface
 
                 $customerObj = $objectManager->create('Magento\Customer\Model\Customer')->getCollection();
                 $customerObj->addFieldToFilter($fieldName, $value);
+                $customerObj->addFieldToFilter('email', array('neq' => $email));
 
-
-                foreach ($customerObj as $customer){
-                    if($customer->getCreatedAt()){
-                        return true;
-                    }
+                foreach ($customerObj as $customer) {
                     return false;
                 }
             }
