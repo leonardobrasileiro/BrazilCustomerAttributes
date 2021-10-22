@@ -26,6 +26,24 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
         );
     }
 
+    public function isCpfRequired()
+    {
+        $show = $this->getConfig("brazilcustomerattributes/cpf/cpf_show");
+        return $show == "req" || $show == "requni";
+    }
+
+    public function isCnpjRequired()
+    {
+        $show = $this->getConfig("brazilcustomerattributes/cnpj/cnpj_show");
+        return $show == "req" || $show == "requni";
+    }
+
+    public function isCpfCnpjRequired()
+    {
+        return $this->isCpfRequired() || $this->isCnpjRequired();
+    }
+
+
     function validateCPF($cpf) {
         // Extrai somente os números
         $cpf = preg_replace( '/[^0-9]/is', '', $cpf );
