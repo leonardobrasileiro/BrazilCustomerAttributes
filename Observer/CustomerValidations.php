@@ -49,7 +49,10 @@ class CustomerValidations implements \Magento\Framework\Event\ObserverInterface
             $params["person_type"] = "cnpj";
         }
 
-        $email = $params["email"];
+        $email = $params["email"] ?? null;
+        if ($email == null && $this->_session->getCustomer()->getEmail()) {
+            $email = $this->_session->getCustomer()->getEmail();
+        }
 
         if (isset($params["person_type"]) && $params["person_type"]=="cpf") {
             $cpf = (isset($params["cpf"])?$params["cpf"]:"");
@@ -121,7 +124,7 @@ class CustomerValidations implements \Magento\Framework\Event\ObserverInterface
             if($value == ""){
                 return false;
             }
-            //verify if is unique
+            //verify if it is unique
             if($show == "requni"){
                 if($this->_session->getCustomer()->getId()!="" && $this->_session->getCustomer()->getData($fieldName) == $value){ //verifico se é ele mesmo que utiliza
                     return true;
@@ -132,7 +135,9 @@ class CustomerValidations implements \Magento\Framework\Event\ObserverInterface
 
                 $customerObj = $objectManager->create('Magento\Customer\Model\Customer')->getCollection();
                 $customerObj->addFieldToFilter($fieldName, $value);
-                $customerObj->addFieldToFilter('email', array('neq' => $email));
+                if ($email != null) {
+                    $customerObj->addFieldToFilter('email', array('neq' => $email));
+                }
 
                 foreach ($customerObj as $customer) {
                     return false;

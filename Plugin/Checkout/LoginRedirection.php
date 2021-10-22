@@ -19,10 +19,14 @@ class LoginRedirection
     public function afterLoadCustomerQuote(Session $_subject, $result)
     {
         $_quote = $_subject->getQuote();
-        if (count($_quote->getAllItems()) > 0) {
-            $this->_customerSession
-                ->setBeforeAuthUrl($this->_storeManager->getStore()->getUrl('checkout/index/index'));
-        }
+
+        $result->setPath('/customer/account/edit');
+        return $result;
+
+//        if (count($_quote->getAllItems()) > 0) {
+//            $this->_customerSession
+//                ->setBeforeAuthUrl($this->_storeManager->getStore()->getUrl('checkout/index/index'));
+//        }
     }
 
 }
